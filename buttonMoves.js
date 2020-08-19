@@ -5,7 +5,7 @@ var firstRoundChoice ="<div class = 'col-3' style='height:270px'></div><div clas
 var secondRoundChoice = "<div class = 'col-2' style='height:430px'></div><div class = 'col-5' style='height:430px'></div><div class = 'col-4 user-bubble' style='height:430px' id='bubbleCheckBox'><div class='row'><div class = 'col-12' style = 'height:5px'></div></div><button class= 'btn btn-light' id='checkBox0' onclick='appendNo(0)'>Fear of contracting it</button><div class='row'><div class = 'col-12' style = 'height:5px'></div></div><button class= 'btn btn-light'  id='checkBox2'  onclick='appendNo(2)'>Scared for a family member/friend</button><div class='row'><div class = 'col-12' style = 'height:5px'></div></div><button class= 'btn btn-light'  id='checkBox4'  onclick='appendNo(4)'>Worried about dying</button><div class='row'><div class = 'col-12' style = 'height:5px'></div></div><button class= 'btn btn-light'  id='checkBox1'  onclick='appendNo(1)'>Parent/caregiver has lost a job</button><div class='row'><div class = 'col-12' style = 'height:5px'></div></div><button class= 'btn btn-light' id='checkBox3'  onclick='appendNo(3)'>Not knowing how we are going to pay bills</button><div class='row'><div class = 'col-12' style = 'height:5px'></div></div><button class= 'btn btn-light' id='submitBtn' onclick='appendStuff()'>Submit.</button></div><div class = 'col-1' style='height:430px'></div>";
 
 
-<<<<<<< Updated upstream
+
 =======
 //Resources
 var SBA_gov = "<div class = 'col-1' style='height:40px'></div> <div class = 'col-3 speech-bubble' style='height:50px'>SBA.gov.</div> <div class = 'col-3' style='height:40px'></div> <div class = 'col-3' style='height:40px'></div>";
@@ -34,7 +34,7 @@ function unfade(element) {
         op += op * 0.1;
     }, 10);
 }
->>>>>>> Stashed changes
+
 
 var ques = [];
 
