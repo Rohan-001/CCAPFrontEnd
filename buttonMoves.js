@@ -488,4 +488,7 @@ d3.select("body").select("#mainContainer").select("#rowContainingSurveyInfoButto
 d3.select("body").select("#mainContainer").select("#rowContainingSurveyInfoButtons").select("#survey").select("#answerChoicesDiv").select("#noButton").attr("onclick"," ");
 }
 
+d3.select("body").select("#mainContainer").select("#rowContainingSurveyInfoButtons").select("#survey").selectAll(".speech-bubble").transition().duration(2000).style("opacity", "1");
+d3.select("body").select("#mainContainer").select("#rowContainingSurveyInfoButtons").select("#survey").selectAll(".user-bubble").transition().duration(2000).style("opacity", "1");
+
 }
