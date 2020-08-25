@@ -6,39 +6,12 @@ var secondRoundChoice = "<div class = 'col-2' style='height:430px'></div><div cl
 
 
 
-=======
-//Resources
-var SBA_gov = "<div class = 'col-1' style='height:40px'></div> <div class = 'col-3 speech-bubble' style='height:50px'>SBA.gov.</div> <div class = 'col-3' style='height:40px'></div> <div class = 'col-3' style='height:40px'></div>";
-var COVID_Resource = "<div class = 'col-1' style='height:40px'></div> <div class = 'col-3 speech-bubble' style='height:50px'>COVID Resource Page.</div> <div class = 'col-3' style='height:40px'></div> <div class = 'col-3' style='height:40px'></div>";
-var CARES_Act_Website = "<div class = 'col-1' style='height:40px'></div> <div class = 'col-3 speech-bubble' style='height:50px'>CARES Act.</div> <div class = 'col-3' style='height:40px'></div> <div class = 'col-3' style='height:40px'></div>";
-var COVID_House_Clean = "<div class = 'col-1' style='height:40px'></div> <div class = 'col-3 speech-bubble' style='height:50px'>COVID House Cleaning.</div> <div class = 'col-3' style='height:40px'></div> <div class = 'col-3' style='height:40px'></div>";
-var Worldometer = "<div class = 'col-1' style='height:40px'></div> <div class = 'col-3 speech-bubble' style='height:50px'>Worldometer.</div> <div class = 'col-3' style='height:40px'></div> <div class = 'col-3' style='height:40px'></div>";
-var CSI_Page = "<div class = 'col-1' style='height:40px'></div> <div class = 'col-3 speech-bubble' style='height:50px'>CSI Page.</div> <div class = 'col-3' style='height:40px'></div> <div class = 'col-3' style='height:40px'></div>";
-var School_Transition_Program = "<div class = 'col-1' style='height:40px'></div> <div class = 'col-3 speech-bubble' style='height:80px'>School Transition Program Page.</div> <div class = 'col-3' style='height:40px'></div> <div class = 'col-3' style='height:40px'></div>";
-var Peer_Counseling = "<div class = 'col-1' style='height:40px'></div> <div class = 'col-3 speech-bubble' style='height:50px'>Peer Counseling.</div> <div class = 'col-3' style='height:40px'></div> <div class = 'col-3' style='height:40px'></div>";
-var CUSD_Tech_Support = "<div class = 'col-1' style='height:40px'></div> <div class = 'col-3 speech-bubble' style='height:50px'>CUSD Tech Support.</div> <div class = 'col-3' style='height:40px'></div> <div class = 'col-3' style='height:40px'></div>";
-var Online_Tutoring = "<div class = 'col-1' style='height:40px'></div> <div class = 'col-3 speech-bubble' style='height:50px'>Free Online Tutoring.</div> <div class = 'col-3' style='height:40px'></div> <div class = 'col-3' style='height:40px'></div>";
-var Staying_in_Touch = "<div class = 'col-1' style='height:40px'></div> <div class = 'col-3 speech-bubble' style='height:100px'>Staying in Touch with Friends Tips.</div> <div class = 'col-3' style='height:40px'></div> <div class = 'col-3' style='height:40px'></div>";
-
-
-//Fades in new buttons
-function unfade(element) {
-    var op = 0.1;  // initial opacity
-    element.style.display = 'block';
-    var timer = setInterval(function () {
-        if (op >= 1){
-            clearInterval(timer);
-        }
-        element.style.opacity = op;
-        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-        op += op * 0.1;
-    }, 10);
-}
-
-
 var ques = [];
 
+
+
 function appendNo(num){
+
 	console.log("pushed me " + num);
 	ques.push(num);
 	if(num == 0){
@@ -64,9 +37,14 @@ function appendNo(num){
 
 }
 
+d3.select("body").select("#mainContainer").select("#rowContainingSurveyInfoButtons").select("#survey").selectAll(".speech-bubble").transition().duration(2000).style("opacity", "1");
+d3.select("body").select("#mainContainer").select("#rowContainingSurveyInfoButtons").select("#survey").selectAll(".user-bubble").transition().duration(2000).style("opacity", "1");
+//d3.select("body").select("#mainContainer").select("#rowContainingSurveyInfoButtons").select("#survey").selectAll(".speech-bubble:after").transition().duration(2000).style("opacity", "1");
 
 
 function appendStuff(num){
+
+
 ques.push(num);
 console.log("----------------");
 console.log(num);
@@ -506,6 +484,8 @@ if(ques.length > 3){
 if(ques[0] == ques1[0]){
 d3.select("body").select("#mainContainer").select("#rowContainingSurveyInfoButtons").select("#survey").append("div").attr("class", "row").html("<div class = 'col-1' style='height:40px'></div> <div class = 'col-3 speech-bubble' style='height:50px'>Have a good day!</div> <div class = 'col-3' style='height:40px'></div> <div class = 'col-3' style='height:40px'></div>");
 d3.select("body").select("#mainContainer").select("#rowContainingSurveyInfoButtons").select("#survey").append("div").attr("class", "row").append("div").attr("class", "col-12 bg-secondary").style("height", "10px");
+d3.select("body").select("#mainContainer").select("#rowContainingSurveyInfoButtons").select("#survey").select("#answerChoicesDiv").select("#yesButton").attr("onclick"," ");
+d3.select("body").select("#mainContainer").select("#rowContainingSurveyInfoButtons").select("#survey").select("#answerChoicesDiv").select("#noButton").attr("onclick"," ");
 }
 
 }
